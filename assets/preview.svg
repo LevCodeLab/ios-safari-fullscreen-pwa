@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470" fill="none">
+  <rect width="920" height="470" rx="16" fill="#0B0B0E"/>
+  <rect x="16" y="16" width="888" height="438" rx="12" fill="#141418" stroke="#26262E" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <line x1="16" y1="58" x2="904" y2="58" stroke="#26262E" stroke-width="1"/>
+  <circle cx="40" cy="37" r="5" fill="#26262E"/>
+  <circle cx="58" cy="37" r="5" fill="#26262E"/>
+  <circle cx="76" cy="37" r="5" fill="#26262E"/>
+  <text x="102" y="42" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700">ios-safari-fullscreen-pwa // 100dvh + viewport-fit=cover</text>
+
+  <rect x="742" y="25" width="142" height="24" rx="6" fill="#FFFFFF"/>
+  <text x="813" y="41" text-anchor="middle" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700">OBSIDIAN UI KIT</text>
+
+  <!-- Phone 1: Broken 100vh -->
+  <rect x="48" y="80" width="236" height="352" rx="28" fill="#0D0D10" stroke="#26262E" stroke-width="1.5"/>
+  <rect x="128" y="90" width="76" height="14" rx="7" fill="#26262E"/>
+  <text x="166" y="124" text-anchor="middle" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700">DEFAULT 100vh TRAP</text>
+  <!-- Dead White/Grey Letterbox Gap -->
+  <rect x="64" y="136" width="204" height="32" rx="4" fill="#26262E"/>
+  <text x="166" y="156" text-anchor="middle" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">DEAD TOP LETTERBOX</text>
+  <rect x="64" y="176" width="204" height="148" rx="8" fill="#141418" stroke="#26262E"/>
+  <text x="166" y="244" text-anchor="middle" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">body { overflow: hidden }</text>
+  <text x="166" y="264" text-anchor="middle" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">URL bar never collapses</text>
+  <!-- Trapped CTA under Safari Bar -->
+  <rect x="64" y="334" width="204" height="34" rx="8" fill="#141418" stroke="#26262E" stroke-dasharray="4 3"/>
+  <text x="166" y="355" text-anchor="middle" fill="#71717A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">CTA CLIPPED BY URL BAR</text>
+  <rect x="64" y="376" width="204" height="40" rx="12" fill="#26262E"/>
+  <text x="166" y="400" text-anchor="middle" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">Safari Static Chrome</text>
+
+  <!-- Phone 2: Fixed Edge-to-Edge 100dvh -->
+  <rect x="312" y="80" width="236" height="352" rx="28" fill="#0A0A0D" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Sticky Curved Top Hero Flush to Glass -->
+  <path d="M 313 108 Q 313 81 340 81 L 520 81 Q 547 81 547 108 L 547 156 Q 547 178 525 178 L 335 178 Q 313 178 313 156 Z" fill="#141418" stroke="#26262E"/>
+  <rect x="392" y="90" width="76" height="14" rx="7" fill="#000000"/>
+  <text x="430" y="132" text-anchor="middle" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700">FLUSH TOP CURVED HERO</text>
+  <text x="430" y="152" text-anchor="middle" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">viewport-fit=cover</text>
+
+  <rect x="328" y="192" width="204" height="68" rx="10" fill="#141418" stroke="#26262E"/>
+  <text x="430" y="222" text-anchor="middle" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700">FloatingGlassWindow</text>
+  <text x="430" y="242" text-anchor="middle" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">100dvh + --vh synced</text>
+
+  <rect x="328" y="270" width="204" height="58" rx="10" fill="#141418" stroke="#26262E"/>
+  <text x="430" y="303" text-anchor="middle" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">Cards glide behind glass</text>
+
+  <!-- Floating Capsule above safe-area -->
+  <rect x="332" y="344" width="196" height="36" rx="18" fill="#141418" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="430" y="366" text-anchor="middle" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700">FloatingNavCapsule</text>
+  <rect x="348" y="392" width="164" height="24" rx="12" fill="#141418" stroke="#26262E"/>
+  <text x="430" y="408" text-anchor="middle" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9.5">Minimized Translucent Bar</text>
+
+  <!-- Right Panel: ActionBottomSheet & Components -->
+  <rect x="576" y="80" width="306" height="352" rx="14" fill="#101014" stroke="#26262E" stroke-width="1.2"/>
+  <text x="596" y="110" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" font-weight="700">ActionBottomSheet.tsx</text>
+  <text x="596" y="130" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5">Pointer-capture ruler + safe-area</text>
+
+  <!-- Ruler Track Preview -->
+  <rect x="596" y="150" width="266" height="38" rx="10" fill="#141418" stroke="#26262E"/>
+  <rect x="596" y="150" width="133" height="38" rx="10" fill="#26262E"/>
+  <circle cx="729" cy="169" r="13" fill="#FFFFFF"/>
+  <text x="729" y="173" text-anchor="middle" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" font-weight="700">50%</text>
+
+  <!-- Monochrome Preset Pills -->
+  <rect x="596" y="202" width="46" height="26" rx="6" fill="#141418" stroke="#26262E"/>
+  <text x="619" y="219" text-anchor="middle" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">10%</text>
+  <rect x="650" y="202" width="46" height="26" rx="6" fill="#141418" stroke="#26262E"/>
+  <text x="673" y="219" text-anchor="middle" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">25%</text>
+  <rect x="704" y="202" width="46" height="26" rx="6" fill="#FFFFFF"/>
+  <text x="727" y="219" text-anchor="middle" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700">50%</text>
+  <rect x="758" y="202" width="46" height="26" rx="6" fill="#141418" stroke="#26262E"/>
+  <text x="781" y="219" text-anchor="middle" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">80%</text>
+  <rect x="812" y="202" width="50" height="26" rx="6" fill="#141418" stroke="#26262E"/>
+  <text x="837" y="219" text-anchor="middle" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">100%</text>
+
+  <!-- Included Components -->
+  <line x1="596" y1="248" x2="862" y2="248" stroke="#26262E"/>
+  <text x="596" y="272" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">+ FloatingGlassWindow.tsx</text>
+  <text x="596" y="294" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">+ LiquidGlassTray.tsx (3 snaps)</text>
+  <text x="596" y="316" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">+ ActionBottomSheet.tsx</text>
+  <text x="596" y="338" fill="#E4E4E7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">+ useSafariViewport.ts</text>
+  <text x="596" y="360" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">+ SAFARI_FULLSCREEN_GUIDE.md</text>
+
+  <!-- Primary White CTA -->
+  <rect x="596" y="382" width="266" height="34" rx="9" fill="#FFFFFF"/>
+  <text x="729" y="403" text-anchor="middle" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700">Confirm 50% Action -&gt;</text>
+</svg>
