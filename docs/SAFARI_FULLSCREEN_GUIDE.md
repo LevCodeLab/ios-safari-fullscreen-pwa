@@ -89,7 +89,7 @@ Where `96px = 56px (navbar height) + 40px (breathing room)`.
 
 ### Step 4: `--vh` Fallback Listener for In-App WebViews
 
-Older iOS WebViews (Telegram, Instagram, embedded WebKit) sometimes misreport `dvh`. Sync `--vh` from `window.innerHeight`:
+Older iOS WebViews (social apps, embedded WebKit) sometimes misreport `dvh`. Sync `--vh` from `window.innerHeight`:
 
 ```ts
 const vh = window.innerHeight * 0.01;
