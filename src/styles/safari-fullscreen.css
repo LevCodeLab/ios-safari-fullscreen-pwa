@@ -1,0 +1,1041 @@
+/*
+ * iOS Safari Edge-to-Edge Fullscreen & Monochrome Obsidian Design System
+ * Palette:
+ *   Canvas:  #0A0A0D
+ *   Surface: #141418
+ *   Border:  #26262E
+ *   Text:    #FFFFFF / #E4E4E7 / #A1A1AA
+ *   Active:  #FFFFFF bg / #000000 text
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
+  background-color: #0a0a0d;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
+  background-color: #0a0a0d;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  background-color: #0a0a0d;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  color: #e4e4e7;
+}
+
+/* Monochrome Buttons & Pills (No multi-color fills) */
+.btnPrimaryWhite {
+  width: 100%;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.btnPrimaryWhite:hover {
+  opacity: 0.92;
+}
+
+.btnObsidian {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  background: #141418;
+  color: #ffffff;
+  border: 1px solid #26262E;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.btnObsidian:hover {
+  border-color: #3f3f46;
+}
+
+.btnSubtleObsidian {
+  width: 100%;
+  height: 36px;
+  border-radius: 10px;
+  background: #141418;
+  color: #e4e4e7;
+  border: 1px solid #26262E;
+  font-weight: 500;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.btnIconObsidian {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #141418;
+  border: 1px solid #26262E;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.pillObsidian {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #141418;
+  border: 1px solid #26262E;
+  color: #e4e4e7;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pillObsidianGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #141418;
+  border: 1px solid transparent;
+  color: #a1a1aa;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pillWhiteActive {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* App Shell & Sticky Curved Top Hero */
+.appShell {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appShell.brokenLock {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.stickyCurvedTopHero {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  padding: calc(env(safe-area-inset-top, 12px) + 12px) 16px 18px;
+  background: rgba(16, 16, 20, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid #26262E;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85);
+  touch-action: pan-y;
+}
+
+.stickyTopInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stickyTopTitle {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.stickyTopSub {
+  font-size: 11px;
+  color: #a1a1aa;
+  margin-top: 2px;
+}
+
+.workspaceGrid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 18px 16px calc(env(safe-area-inset-bottom, 20px) + 116px);
+}
+
+@media (min-width: 820px) {
+  .workspaceGrid {
+    grid-template-columns: 360px 1fr;
+    align-items: start;
+    padding-top: 24px;
+  }
+}
+
+/* FloatingGlassWindow */
+.fgwRoot {
+  width: 100%;
+}
+
+.fgwCard {
+  border-radius: 22px;
+  padding: 22px 20px;
+  background: #141418;
+  border: 1px solid #26262E;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.65);
+}
+
+.fgwHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fgwBrandWrap {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.fgwLogoMark {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fgwBrandTitle {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.fgwStatusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #141418;
+  border: 1px solid #26262E;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #e4e4e7;
+}
+
+.fgwStatusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.fgwHeroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fgwHeadline {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  line-height: 1.18;
+}
+
+.fgwSubtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #a1a1aa;
+  line-height: 1.45;
+}
+
+.fgwMetricsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+}
+
+.fgwMetricCell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.fgwMetricLabel {
+  font-size: 10px;
+  color: #a1a1aa;
+  font-weight: 600;
+}
+
+.fgwMetricValue {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.fgwActionsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fgwFooterRow {
+  padding-top: 14px;
+  border-top: 1px solid #26262E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.fgwModeMeta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.fgwModeIconWrap {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.fgwModeTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.fgwModeTitle {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.fgwModeSub {
+  font-size: 10.5px;
+  color: #a1a1aa;
+}
+
+/* Scrollable Feed Cards */
+.feedColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.obsidianCard {
+  border-radius: 18px;
+  padding: 18px;
+  background: #141418;
+  border: 1px solid #26262E;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.obsidianCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.obsidianCardTitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.obsidianCardBody {
+  font-size: 13px;
+  color: #a1a1aa;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: #0b0b0e;
+  border: 1px solid #26262E;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11.5px;
+  color: #e4e4e7;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+
+/* Floating Bottom Nav Capsule */
+.floatingNavCapsule {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 10px) + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 28px);
+  max-width: 420px;
+  height: 54px;
+  padding: 5px;
+  border-radius: 27px;
+  background: rgba(20, 20, 24, 0.88);
+  backdrop-filter: blur(26px);
+  -webkit-backdrop-filter: blur(26px);
+  border: 1px solid #26262E;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  z-index: 80;
+}
+
+.navCapsuleBtn {
+  flex: 1;
+  height: 42px;
+  border-radius: 21px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #e4e4e7;
+  font-size: 11.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navCapsuleBtn.active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* LiquidGlassTray */
+.trayBackdropDimmer {
+  position: fixed;
+  inset: 0;
+  background: #000000;
+  z-index: 90;
+  transition: opacity 0.25s ease;
+}
+
+.liquidGlassTray {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+  max-width: 560px;
+  background: rgba(20, 20, 24, 0.96);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-top: 1px solid #26262E;
+  border-left: 1px solid #26262E;
+  border-right: 1px solid #26262E;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  padding: 6px 16px calc(env(safe-area-inset-bottom, 16px) + 16px);
+  z-index: 95;
+  transition: max-height 0.28s ease, transform 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.liquidGlassTray.tray-collapsed {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top-width: 0;
+  pointer-events: none;
+}
+
+.liquidGlassTray.tray-half {
+  max-height: 52dvh;
+}
+
+.liquidGlassTray.tray-expanded {
+  max-height: 84dvh;
+}
+
+.trayHandleZone {
+  width: 100%;
+  padding: 8px 0 2px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trayHandleBar {
+  width: 40px;
+  height: 4px;
+  border-radius: 999px;
+  background: #3f3f46;
+}
+
+.trayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.trayIdentity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trayBadgeAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.trayTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.trayTitle {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.traySubtitle {
+  font-size: 11px;
+  color: #a1a1aa;
+}
+
+.trayHeaderControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trayTabGroup {
+  display: inline-flex;
+  gap: 4px;
+  padding: 2px;
+  border-radius: 10px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+}
+
+.traySessionStrip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.trayContentArea {
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.trayStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trayProgressCard {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trayProgressTopRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.trayProgressMeta {
+  color: #a1a1aa;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.trayProgressBarTrack {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #26262E;
+  overflow: hidden;
+}
+
+.trayProgressBarFill {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 3px;
+  transition: width 0.25s ease;
+}
+
+.trayListHeader {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #a1a1aa;
+  letter-spacing: 0.5px;
+}
+
+.trayItemRow {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #141418;
+  border: 1px solid #26262E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.trayItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trayStepCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.trayItemTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.trayItemTitle {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.trayItemDetail {
+  font-size: 11px;
+  color: #a1a1aa;
+}
+
+.trayItemRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.trayItemMetric {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.trayItemSubMetric {
+  font-size: 10.5px;
+  color: #a1a1aa;
+}
+
+.trayFooterActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.trayNotesBox {
+  padding: 14px;
+  border-radius: 12px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+  font-size: 12.5px;
+  color: #e4e4e7;
+  line-height: 1.5;
+}
+
+/* ActionBottomSheet */
+.absBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 110;
+}
+
+.absSheet {
+  width: 100%;
+  max-width: 460px;
+  background: #141418;
+  border-top: 1px solid #26262E;
+  border-left: 1px solid #26262E;
+  border-right: 1px solid #26262E;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  padding: 8px 18px calc(env(safe-area-inset-bottom, 18px) + 18px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.9);
+}
+
+.absGrabberWrap {
+  display: flex;
+  justify-content: center;
+  padding: 4px 0;
+}
+
+.absGrabber {
+  width: 38px;
+  height: 4px;
+  border-radius: 999px;
+  background: #3f3f46;
+}
+
+.absTopCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 14px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+}
+
+.absTopLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.absAvatarBox {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #141418;
+  border: 1px solid #26262E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.absMetaCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.absTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.absTitle {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.absSubMeta {
+  font-size: 11px;
+  color: #a1a1aa;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.absSliderCard,
+.absQuoteCard,
+.absDestCard {
+  padding: 14px;
+  border-radius: 16px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.absSliderHeader,
+.absPresetRow,
+.absQuoteMainRow,
+.absDestTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.absSliderLabels {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.absMutedLabel {
+  font-size: 11px;
+  color: #a1a1aa;
+  font-weight: 600;
+}
+
+.absBoldVal {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.absInlineInputWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #141418;
+  border: 1px solid #ffffff;
+  font-size: 12px;
+}
+
+.absInlineInput {
+  width: 44px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  outline: none;
+}
+
+.absTrack {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  border-radius: 12px;
+  background: #141418;
+  border: 1px solid #26262E;
+  overflow: hidden;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+.absTrackTicks {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.08) 0px,
+    rgba(255, 255, 255, 0.08) 1px,
+    transparent 1px,
+    transparent 16px
+  );
+}
+
+.absTrackFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.22);
+  border-right: 1px solid #ffffff;
+}
+
+.absThumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  font-size: 9px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.absPresetGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.absQuoteBig {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.absQuoteMetaLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: #a1a1aa;
+}
+
+.absCustomInput {
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 9px;
+  background: #141418;
+  border: 1px solid #26262E;
+  color: #ffffff;
+  font-size: 12px;
+  outline: none;
+}
+
+.absStateBox {
+  padding: 24px 14px;
+  border-radius: 16px;
+  background: #0e0e12;
+  border: 1px solid #26262E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.absStateTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.absStateSub {
+  font-size: 12px;
+  color: #a1a1aa;
+}
+
+.absBtnRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+}
+
+.absSpinner {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #26262E;
+  border-top-color: #ffffff;
+  animation: absSpin 0.7s linear infinite;
+}
+
+@keyframes absSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
