@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 1. viewport-fit=cover removes iOS notch & home-bar letterboxing -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <!-- 2. Standalone PWA & translucent status bar directives -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="ObsidianPWA" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- 3. Match Safari floating chrome tint to canvas -->
+    <meta name="theme-color" content="#0A0A0D" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>iOS Safari Fullscreen PWA Kit</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
